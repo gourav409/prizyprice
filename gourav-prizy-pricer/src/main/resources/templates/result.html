@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<a href="/storeproduct">Add another product</a>
+<a href="/">Home</a>
+<head>
+    <title>Add Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Product Added</h1>
+    <p th:text="'Store: ' + ${storeProduct.store.name}" />
+    <p th:text="'Product Bar Code: ' + ${storeProduct.product.barCode}" />
+    <p th:text="'Price: ' + ${storeProduct.price}" />
+    <p th:text="'Notes: ' + ${storeProduct.notes}" />
+</body>
+</html>

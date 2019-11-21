@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<a href="/">Home</a>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+</head>
+<body>
+
+	<h2>Search Product</h2>
+
+
+	<form role="form" id="sendBarCode" th:action=@{/viewproduct}
+		method="POST">
+		<div class="dropdown">
+			<div id="myDropdown" class="dropdown-content">
+				<input type="text" placeholder="Product bar code.." id="myInput"
+					onkeyup="filterFunction()"> <select class="product"
+					name="Productbarcode">
+					<option value="">Select..</option>
+					<option th:each="product : ${listStoreProduct}"
+						id="${product}"
+						th:value="${product}"
+						th:text="${product}"></option>
+				</select>
+			</div>
+		</div>
+		<input type="submit" value="Submit" /><input type="reset" value="Reset" />
+	</form>
+
+
+
+
+	<!-- <form action="/viewproduct" th:object="${product.product.barCode}" method="POST">
+<div class="dropdown">
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Product bar code.." id="myInput" onkeyup="filterFunction()">
+    <select id="product-list">
+    <option id="select" th:value="select" th:text="select"></option>
+    <option id="${product.product.barCode}" th:each="product : ${listStoreProduct}"
+					th:value="${product.product.barCode}"
+					th:text="${product.product.barCode}" ></option>
+	</select>
+  </div>
+</div>
+<input type="submit" value="Submit" /><input type="reset" value="Reset" /></form> -->
+
+	<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("sendBarCode");
+  a = div.getElementsByTagName("option");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+

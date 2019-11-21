@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<a href="/">Home</a>
+<head>
+    <title>Add Product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Product Information</h1>
+    <p th:text="'Product Bar Code: ' + ${storeProduct.product.barCode}" />
+    <p th:text="'Product Average Price: ' + ${storeProduct.averagePrice}" />
+    <p th:text="'Product Highest Price: ' + ${storeProduct.highestPrice}" />
+    <p th:text="'Product Lowest Price: ' + ${storeProduct.lowestPrice}" />
+    <p th:text="'Product Ideal Price: ' + ${storeProduct.idealPrice}" />
+    
+    <a href="/viewproduct">View another product</a>
+</body>
+</html>

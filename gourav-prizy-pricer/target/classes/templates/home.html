@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<a href="/">Home</a>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Load a Product</title>
+</head>
+<body>
+<h1>Store Product</h1>
+<form action="#" th:action="@{/storeproduct}" th:object="${storeProduct}" method="post">
+			<table style="with: 50%">
+				<tr>
+					<td>Store</td>
+					<td><input type="text"  th:field="*{store.name}" /></td>
+				</tr>
+				<tr>
+					<td>Product Bar Code</td>
+					<td><input type="text"  th:field="*{product.barCode}" /></td>
+				</tr>
+				<tr>
+					<td>Price</td>
+					<td><input type="text"  th:field="*{price}" /></td>
+				</tr>
+				<tr>
+					<td>Notes</td>
+					<td><input type="text"  th:field="*{notes}" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="Submit" /><input type="reset" value="Reset" /></form>
+</body>
+</html>
