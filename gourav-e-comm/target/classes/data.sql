@@ -1,0 +1,13 @@
+INSERT INTO ITEM VALUES(1, 'Good', 'Shirt','Men');
+INSERT INTO ITEM VALUES(2, 'VGood', 'TShirt','Women');
+
+
+INSERT INTO CART VALUES(10, 1);
+INSERT INTO CART VALUES(11, 2);
+
+INSERT INTO ADDRESS VALUES(100, 'bAdd', 'dAdd');
+
+
+
+INSERT INTO CUSTOMER VALUES(1000, 27, 'g@gmail.com','Men', 'Gourav',100, 10);
+INSERT INTO CUSTOMER VALUES(1001, 26, 'gk@gmail.com','Women', 'Rakhi',100, 11);
